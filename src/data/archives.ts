@@ -1,0 +1,98 @@
+export interface Sermon {
+  id: string;
+  title: string;
+  date: string;
+  speaker: string;
+  youtubeUrl: string;
+  description?: string;
+  series?: string;
+}
+
+export const sermons: Sermon[] = [
+  {
+    id: "1",
+    title: "Walking in Purpose",
+    date: "February 16, 2025",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "Discovering the divine purpose God has placed within each of us.",
+    series: "Faith Forward",
+  },
+  {
+    id: "2",
+    title: "Strength in the Storm",
+    date: "February 9, 2025",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "Finding peace and strength during life's most challenging seasons.",
+    series: "Faith Forward",
+  },
+  {
+    id: "3",
+    title: "The Power of Prayer",
+    date: "February 2, 2025",
+    speaker: "Sis. Dorothy Williams",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "Understanding how prayer transforms our hearts and circumstances.",
+  },
+  {
+    id: "4",
+    title: "Rooted in His Word",
+    date: "January 26, 2025",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "The importance of grounding our lives in Scripture.",
+    series: "Foundations",
+  },
+  {
+    id: "5",
+    title: "Renewed by Grace",
+    date: "January 19, 2025",
+    speaker: "Deacon Thomas Brown",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "God's grace is new every morning — a message of hope and renewal.",
+    series: "Foundations",
+  },
+  {
+    id: "6",
+    title: "Love One Another",
+    date: "January 12, 2025",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "A call to radical, Christlike love for our neighbors.",
+  },
+  {
+    id: "7",
+    title: "New Year, New Vision",
+    date: "January 5, 2025",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "Stepping into the new year with God's vision for our lives.",
+  },
+  {
+    id: "8",
+    title: "The Christmas Promise",
+    date: "December 22, 2024",
+    speaker: "Sis. Dorothy Williams",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "Reflecting on the eternal promise fulfilled in the birth of Jesus.",
+    series: "Advent 2024",
+  },
+  {
+    id: "9",
+    title: "Hope is Coming",
+    date: "December 15, 2024",
+    speaker: "Rev. Marcus Johnson",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "The advent season reminds us that our hope is alive in Christ.",
+    series: "Advent 2024",
+  },
+  {
+    id: "10",
+    title: "Gratitude Changes Everything",
+    date: "November 24, 2024",
+    speaker: "Deacon Thomas Brown",
+    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    description: "A Thanksgiving message on the transformative power of gratitude.",
+  },
+];
