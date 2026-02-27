@@ -19,6 +19,7 @@
   --gold: #D4AF37;
   --silver: #C0C0C0;
   --white: #FFFFFF;
+  --gradient-purple-deep: linear-gradient(135deg, #2B0F3A 0%, #5B2C83 100%);
 }
 
 html {

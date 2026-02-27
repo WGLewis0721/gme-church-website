@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ChurchIcon from "@/components/ChurchIcon";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,13 +19,16 @@ export default function NavBar() {
       <div className="container-main">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Church Name */}
-          <Link href="/" className="flex-shrink-0">
-            <span className="text-white font-serif font-bold text-lg md:text-xl leading-tight">
-              Greater Mt. Olive
-            </span>
-            <span className="hidden md:block text-silver text-xs mt-0.5">
-              AME Zion Church
-            </span>
+          <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+            <ChurchIcon />
+            <div>
+              <span className="text-white font-serif font-bold text-lg md:text-xl leading-tight block">
+                Greater Mt. Olive
+              </span>
+              <span className="hidden md:block text-silver text-xs">
+                AME Zion Church
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

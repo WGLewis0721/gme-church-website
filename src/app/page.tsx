@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import VideoEmbed from "@/components/VideoEmbed";
 import GalleryGrid from "@/components/GalleryGrid";
+import ChurchIcon from "@/components/ChurchIcon";
 import { siteConfig } from "@/data/siteConfig";
 import { sermons } from "@/data/archives";
 import { galleryImages } from "@/data/gallery";
@@ -13,20 +15,26 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="relative bg-purple-deep min-h-[85vh] flex items-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(135deg, #2B0F3A 0%, #5B2C83 50%, #2B0F3A 100%)",
-        }}
-      >
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background Church Photo */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1600&h=900&fit=crop"
+            alt="Church congregation worshipping"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-deep/95 via-purple-deep/80 to-purple-deep/40" />
+        </div>
+
         {/* Decorative circles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
           <div className="absolute -top-32 -right-32 w-96 h-96 bg-gold/5 rounded-full" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-primary/20 rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
 
-        <div className="container-main relative z-10 py-20">
+        <div className="container-main relative z-20 py-20">
           <div className="max-w-3xl">
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-4">
               Welcome to
@@ -52,22 +60,22 @@ export default function HomePage() {
       </section>
 
       {/* Next Service Strip */}
-      <section className="bg-gold py-5">
+      <section className="bg-white border-b border-silver/40 py-5 shadow-sm">
         <div className="container-main">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-purple-deep">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="font-semibold text-sm">Next Service:</span>
-            </div>
-            {siteConfig.serviceTimes.slice(0, 2).map((s, i) => (
-              <div key={i} className="text-sm font-medium">
-                <span className="font-bold">{s.day}</span> at {s.time} — {s.label}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <div className="flex items-center gap-3">
+              <ChurchIcon />
+              <div>
+                <p className="text-purple-deep font-bold text-sm">Sunday Worship Service</p>
+                <p className="text-gray-500 text-xs">
+                  Next Service: {siteConfig.serviceTimes[0].day} at {siteConfig.serviceTimes[0].time}
+                </p>
               </div>
-            ))}
-            <Link href="/live" className="font-semibold text-sm underline underline-offset-2 hover:text-purple-deep/70">
+            </div>
+            <p className="text-gray-500 text-sm hidden sm:block">
+              Join us in praise and worship. We look forward to seeing you!
+            </p>
+            <Link href="/live" className="text-purple-primary font-semibold text-sm underline underline-offset-2 hover:text-purple-light">
               Watch Online →
             </Link>
           </div>
@@ -109,7 +117,7 @@ export default function HomePage() {
       <section
         className="section-padding"
         style={{
-          background: "linear-gradient(135deg, #2B0F3A 0%, #5B2C83 100%)",
+          background: "var(--gradient-purple-deep)",
         }}
       >
         <div className="container-main">

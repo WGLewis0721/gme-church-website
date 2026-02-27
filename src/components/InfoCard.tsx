@@ -17,7 +17,7 @@ export default function InfoCard({
 }: InfoCardProps) {
   return (
     <div className="bg-white border border-silver/40 rounded-xl p-8 card-shadow text-center flex flex-col items-center">
-      <div className="w-16 h-16 bg-purple-primary/10 rounded-full flex items-center justify-center mb-4 text-purple-primary">
+      <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-4 text-gold-dark">
         {icon}
       </div>
       <h3 className="text-purple-deep font-serif font-bold text-xl mb-3">{title}</h3>

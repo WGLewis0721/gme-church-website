@@ -10,8 +10,8 @@ export const siteConfig = {
     fullAddress: "123 Church Street, Hayneville, AL 36040",
   },
   contact: {
-    phone: "(334) 555-0100",
-    email: "info@greatermtolive.org",
+    phone: "(334) 652-2601",
+    email: "gmeamezion@gmail.com",
   },
   serviceTimes: [
     { day: "Sunday", time: "10:30 AM", label: "Morning Worship" },
