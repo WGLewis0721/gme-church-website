@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { GalleryImage } from "@/data/gallery";
 
 interface GalleryGridProps {
@@ -19,12 +20,12 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           key={img.id}
           className="relative aspect-[4/3] rounded-xl overflow-hidden group card-shadow border border-silver/30"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={img.src}
             alt={img.alt}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
           {img.caption && (
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-deep/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
