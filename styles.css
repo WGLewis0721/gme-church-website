@@ -1,0 +1,1349 @@
+/* ============================================
+   Greater Mt. Olive AME Zion Church
+   Church Website Template — styles.css
+   ============================================ */
+
+/* --- Color Tokens --- */
+:root {
+  --purple: #5B2C83;
+  --deep-purple: #2B0F3A;
+  --purple-light: #7B3DB3;
+  --gold: #D4AF37;
+  --gold-dark: #B8960C;
+  --gold-light: #E8CC6A;
+  --silver: #C0C0C0;
+  --soft-bg: #F7F5FA;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-medium: #4b5563;
+  --text-light: #9ca3af;
+  --border-light: rgba(192, 192, 192, 0.4);
+  --gradient-purple: linear-gradient(135deg, #2B0F3A 0%, #5B2C83 100%);
+  --section-spacing: 5rem;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+/* --- Focus States --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .container { padding: 0 2rem; }
+}
+
+.section-padding {
+  padding: var(--section-spacing) 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding { padding: 6rem 0; }
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+#site-nav nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--deep-purple);
+  border-bottom: 1px solid rgba(91, 44, 131, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+@media (min-width: 768px) {
+  .nav-inner { height: 5rem; }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.nav-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.nav-logo-text .church-name {
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  line-height: 1.2;
+}
+
+.nav-logo-text .church-sub {
+  color: var(--silver);
+  font-size: 0.7rem;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-logo-text .church-sub { display: block; }
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+}
+
+.nav-links a {
+  color: var(--silver);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--white);
+}
+
+.btn-give-nav {
+  background: var(--gold);
+  color: var(--deep-purple) !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.btn-give-nav:hover,
+.btn-give-nav:focus-visible {
+  background: var(--gold-dark);
+  color: var(--deep-purple) !important;
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .hamburger-btn { display: none; }
+}
+
+.hamburger-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobile-menu {
+  display: none;
+  border-top: 1px solid rgba(91, 44, 131, 0.3);
+  padding: 1rem 0;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  color: var(--silver);
+  font-weight: 500;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.375rem;
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover {
+  color: var(--white);
+}
+
+.mobile-menu .btn-give-nav {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+  background: var(--gold);
+  color: var(--deep-purple);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--gold-dark);
+  color: var(--deep-purple);
+}
+
+.btn-secondary {
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header.centered {
+  text-align: center;
+}
+
+.section-header .eyebrow {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-header h2 {
+  color: var(--deep-purple);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .section-header h2 { font-size: 2.5rem; }
+}
+
+.section-header .subtitle {
+  color: var(--text-medium);
+  font-size: 1.125rem;
+  max-width: 40rem;
+  line-height: 1.7;
+}
+
+.section-header.centered .subtitle {
+  margin: 0 auto;
+}
+
+.section-header.light .eyebrow {
+  color: var(--gold-light);
+}
+
+.section-header.light h2 {
+  color: var(--white);
+}
+
+.section-header.light .subtitle {
+  color: rgba(192, 192, 192, 0.85);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(43, 15, 58, 0.95) 0%, rgba(43, 15, 58, 0.8) 50%, rgba(43, 15, 58, 0.4) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 5rem 0;
+  max-width: 48rem;
+}
+
+.hero-eyebrow {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero h1 { font-size: 4rem; }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 { font-size: 5rem; }
+}
+
+.hero h1 .highlight {
+  color: var(--gold);
+}
+
+.hero p.tagline {
+  color: rgba(192, 192, 192, 0.9);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ============================================
+   PAGE HERO (inner pages)
+   ============================================ */
+.page-hero {
+  background: var(--gradient-purple);
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .page-hero { padding: 7rem 0; }
+}
+
+.page-hero-inner {
+  text-align: center;
+}
+
+.page-hero .eyebrow {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-hero h1 { font-size: 3.5rem; }
+}
+
+.page-hero p {
+  color: rgba(192, 192, 192, 0.85);
+  font-size: 1.125rem;
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================================
+   SERVICE STRIP
+   ============================================ */
+.service-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.service-strip-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .service-strip-inner {
+    flex-direction: row;
+    gap: 2rem;
+    text-align: left;
+  }
+}
+
+.service-strip-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: Georgia, serif;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   SERMON CARDS
+   ============================================ */
+.sermon-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .sermon-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.sermon-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s;
+  background: var(--white);
+}
+
+.sermon-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.sermon-thumbnail {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background: var(--deep-purple);
+}
+
+.sermon-thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.sermon-card:hover .sermon-thumbnail img {
+  transform: scale(1.05);
+}
+
+.sermon-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(43, 15, 58, 0.4);
+  transition: background 0.2s;
+}
+
+.sermon-card:hover .sermon-play-btn {
+  background: rgba(43, 15, 58, 0.6);
+}
+
+.sermon-play-btn svg {
+  width: 3rem;
+  height: 3rem;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.sermon-info {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sermon-series {
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.sermon-title {
+  color: var(--deep-purple);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+  line-height: 1.3;
+  font-family: Georgia, serif;
+}
+
+.sermon-meta {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.sermon-description {
+  color: var(--text-medium);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.sermon-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.sermon-link:hover {
+  color: var(--purple-light);
+}
+
+/* ============================================
+   GALLERY GRID
+   ============================================ */
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.gallery-item {
+  position: relative;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: var(--deep-purple);
+}
+
+.gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(43, 15, 58, 0.85) 0%, transparent 100%);
+  color: var(--white);
+  font-size: 0.75rem;
+  padding: 1.5rem 0.75rem 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* ============================================
+   VIDEO WRAPPER (16:9 responsive)
+   ============================================ */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================
+   INFO CARDS (giving methods, stats)
+   ============================================ */
+.info-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .info-cards { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(91, 44, 131, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--purple);
+}
+
+.info-card-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.info-card h3 {
+  color: var(--deep-purple);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+/* ============================================
+   STATS GRID
+   ============================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.stat-label {
+  color: rgba(192, 192, 192, 0.8);
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   MINISTRY CARDS
+   ============================================ */
+.ministry-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .ministry-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .ministry-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.ministry-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ministry-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.ministry-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ministry-card h3 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 0.375rem;
+}
+
+.ministry-card p {
+  color: rgba(192, 192, 192, 0.75);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ============================================
+   LEADERSHIP CARDS
+   ============================================ */
+.leader-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .leader-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .leader-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.leader-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+}
+
+.leader-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.leader-avatar span {
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.leader-card h3 {
+  color: var(--deep-purple);
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.leader-card .leader-title {
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.leader-card p {
+  color: var(--text-medium);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SERVICE TIMES
+   ============================================ */
+.service-times-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .service-times-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.service-time-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.service-time {
+  color: var(--gold);
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: Georgia, serif;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.service-day {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.service-label {
+  color: rgba(192, 192, 192, 0.75);
+  font-size: 0.8rem;
+}
+
+.service-times-grid-light .service-time-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+}
+
+.service-times-grid-light .service-time {
+  color: var(--purple);
+}
+
+.service-times-grid-light .service-day {
+  color: var(--deep-purple);
+}
+
+.service-times-grid-light .service-label {
+  color: var(--text-light);
+}
+
+/* ============================================
+   LIVE BADGE
+   ============================================ */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.live-badge span {
+  color: #fca5a5;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   BLOCKQUOTE
+   ============================================ */
+blockquote {
+  border-left: 4px solid var(--gold);
+  padding-left: 1.25rem;
+}
+
+blockquote p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--deep-purple);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+blockquote footer {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
+   MAP PLACEHOLDER
+   ============================================ */
+.map-placeholder {
+  background: #f3f4f6;
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.map-placeholder svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+/* ============================================
+   BACKGROUND UTILITIES
+   ============================================ */
+.bg-dark-purple { background: var(--gradient-purple); }
+.bg-soft { background: var(--soft-bg); }
+.bg-white-section { background: var(--white); }
+.bg-gold-tint {
+  background: rgba(212, 175, 55, 0.08);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+#site-footer footer {
+  background: var(--deep-purple);
+  color: var(--silver);
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+.footer-brand .footer-church-name {
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-brand p {
+  color: rgba(192, 192, 192, 0.75);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 20rem;
+}
+
+.footer-section h4 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: rgba(192, 192, 192, 0.75);
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: rgba(192, 192, 192, 0.5);
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   TWO-COLUMN GRID
+   ============================================ */
+.grid-2 {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================
+   MISSION QUOTE BOX
+   ============================================ */
+.mission-quote {
+  background: rgba(91, 44, 131, 0.05);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1.5rem;
+}
+
+.mission-quote p {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--deep-purple);
+  line-height: 1.6;
+}
+
+/* ============================================
+   PRAYER / CTA BOX
+   ============================================ */
+.cta-box {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+}
+
+.cta-box-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .cta-box-buttons { flex-direction: row; }
+}
+
+/* ============================================
+   ASPECT RATIO COVER IMAGE
+   ============================================ */
+.aspect-cover {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+}
+
+.aspect-cover::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+
+.aspect-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   SKIP LINK
+   ============================================ */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  clip: auto;
+  background: var(--gold);
+  color: var(--deep-purple);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* ============================================
+   SOCIAL LINKS SECTION
+   ============================================ */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.social-link-icon {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.text-white { color: var(--white); }
+.text-silver { color: var(--silver); }
+.text-purple { color: var(--purple); }
+.text-deep-purple { color: var(--deep-purple); }
+.text-medium { color: var(--text-medium); }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+.max-w-2xl { max-width: 42rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.underline { text-decoration: underline; }
+.underline-offset { text-underline-offset: 2px; }

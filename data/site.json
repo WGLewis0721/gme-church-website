@@ -1,0 +1,29 @@
+{
+  "churchName": "Greater Mt. Olive AME Zion Church",
+  "shortName": "Greater Mt. Olive",
+  "location": "Hayneville, AL",
+  "address": "123 Church Street, Hayneville, AL 36040",
+  "phone": "(334) 652-2601",
+  "email": "gmeamezion@gmail.com",
+  "tagline": "Rooted in Faith. Growing in Grace. Serving in Love.",
+  "serviceTimes": [
+    { "day": "Sunday", "time": "10:30 AM", "label": "Morning Worship" },
+    { "day": "Sunday", "time": "6:00 PM", "label": "Evening Service" },
+    { "day": "Wednesday", "time": "7:00 PM", "label": "Bible Study & Prayer" }
+  ],
+  "givingLink": "https://example.com/give",
+  "textToGive": "(334) 555-0200",
+  "mailAddress": "P.O. Box 100, Hayneville, AL 36040",
+  "facebook": "https://facebook.com",
+  "youtube": "https://youtube.com",
+  "instagram": "https://instagram.com",
+  "youtubeChannelId": "UCxxxxxxxx",
+  "ministries": [
+    { "name": "Youth Ministry", "description": "Equipping young people to live boldly for Christ." },
+    { "name": "Women's Ministry", "description": "Empowering women through faith, service, and sisterhood." },
+    { "name": "Men's Ministry", "description": "Building strong men of God in family, church, and community." },
+    { "name": "Music Ministry", "description": "Leading the congregation in spirit-filled praise and worship." },
+    { "name": "Community Outreach", "description": "Serving Hayneville and beyond with acts of love and justice." },
+    { "name": "Senior Ministry", "description": "Honoring and caring for our beloved senior members." }
+  ]
+}
