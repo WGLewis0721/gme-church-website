@@ -1,8 +1,44 @@
 # Greater Mt. Olive AME Zion Church Website
 
-https://wglewis0721.github.io/gme-church-website/
+🌐 **Live site:** https://wglewis0721.github.io/gme-church-website/
 
 Official website for Greater Mt. Olive AME Zion Church in Hayneville, AL — *Rooted in Faith. Growing in Grace. Serving in Love.*
+
+---
+
+## Viewing the Live Website
+
+The site is deployed automatically to GitHub Pages whenever code is pushed to the `main` branch.
+
+### One-time GitHub Pages Setup (required once per repository)
+
+1. Go to **https://github.com/WGLewis0721/gme-church-website/settings/pages**
+2. Under **"Build and deployment"**, set the **Source** to **"GitHub Actions"**
+3. Click **Save**
+
+Once saved, every push to `main` will build and deploy the site automatically.
+
+### Triggering a Fresh Deploy
+
+After setting up GitHub Pages (or after any code change is merged to `main`), a deploy runs automatically. To trigger one manually:
+
+1. Go to **https://github.com/WGLewis0721/gme-church-website/actions/workflows/deploy.yml**
+2. Click **"Run workflow"** → select `main` branch → **"Run workflow"**
+3. Wait ~60 seconds for the build to complete
+4. Visit **https://wglewis0721.github.io/gme-church-website/**
+
+> **Tip:** After a deploy, GitHub Pages can take 1–2 minutes to propagate. If you still see old content, do a hard refresh (`Ctrl+Shift+R` on Windows/Linux, `Cmd+Shift+R` on Mac) or open the site in a private/incognito window.
+
+---
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site locally (no GitHub Pages setup needed).
 
 ## Tech Stack
 
@@ -11,15 +47,6 @@ Official website for Greater Mt. Olive AME Zion Church in Hayneville, AL — *Ro
 - **[TypeScript 5](https://www.typescriptlang.org/)**
 - **[Tailwind CSS v4](https://tailwindcss.com/)** (via PostCSS)
 - **ESLint 9** with `eslint-config-next`
-
-## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Available Scripts
 
