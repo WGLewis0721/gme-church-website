@@ -1,5 +1,7 @@
 # Greater Mt. Olive AME Zion Church Website
 
+https://wglewis0721.github.io/gme-church-website/
+
 Official website for Greater Mt. Olive AME Zion Church in Hayneville, AL — *Rooted in Faith. Growing in Grace. Serving in Love.*
 
 ## Tech Stack
