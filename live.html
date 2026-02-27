@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Service | Greater Mt. Olive AME Zion Church</title>
+  <meta name="description" content="Watch Greater Mt. Olive AME Zion Church live every Sunday at 10:30 AM CT. Stream our worship service or catch the latest recording on YouTube.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Live Service | Greater Mt. Olive AME Zion Church">
+  <meta property="og:description" content="Watch our Sunday morning worship service live every Sunday at 10:30 AM CT.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1200&h=630&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5B2C83">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (rendered by app.js) -->
+  <div id="site-nav"></div>
+
+  <main id="main-content">
+
+    <!-- ── Page Hero ──────────────────────────────────────── -->
+    <section class="page-hero" style="padding:3.5rem 0 4rem;">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div class="live-badge">
+            <div class="live-dot"></div>
+            <span>Live Sundays at 10:30 AM</span>
+          </div>
+          <h1>Join Us Live</h1>
+          <p>Watch our Sunday morning worship service live, or catch the latest recording below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Live Stream Embed ──────────────────────────────── -->
+    <section class="section-padding bg-white-section">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <!-- Rendered by app.js using youtubeChannelId from site.json -->
+          <div data-render="live-stream"></div>
+          <div class="card mt-6" style="border-radius:0.75rem;">
+            <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+              <div>
+                <h3 style="color:var(--deep-purple);font-size:1.25rem;margin-bottom:0.25rem;">Service Time Reminder</h3>
+                <p style="color:var(--text-medium);font-size:0.875rem;">
+                  Join us live every Sunday at 10:30 AM CT. Wednesday Bible Study at 7:00 PM.
+                </p>
+              </div>
+              <a href="https://youtube.com" data-site-href="youtube"
+                 target="_blank" rel="noopener noreferrer"
+                 style="background:#dc2626;color:var(--white);font-weight:700;padding:0.5rem 1.25rem;border-radius:0.5rem;font-size:0.875rem;display:inline-block;transition:background 0.2s;"
+                 onmouseover="this.style.background='#b91c1c'" onmouseout="this.style.background='#dc2626'">
+                Subscribe on YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Give CTA ───────────────────────────────────────── -->
+    <section class="section-padding bg-dark-purple">
+      <div class="container text-center">
+        <div class="section-header centered light">
+          <span class="eyebrow">Support Our Ministry</span>
+          <h2>Give Online</h2>
+          <p class="subtitle">
+            Your generous giving enables us to continue spreading the gospel and
+            serving our community. Give securely today.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://example.com/give" data-site-href="givingLink" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Give Online Now
+          </a>
+          <a href="give.html" class="btn-outline-light">
+            Learn About Giving
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Service Times ──────────────────────────────────── -->
+    <section class="section-padding bg-soft">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Plan Your Visit</span>
+          <h2>Service Schedule</h2>
+        </div>
+        <!-- Rendered by app.js -->
+        <div data-render="service-times"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (rendered by app.js) -->
+  <div id="site-footer"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

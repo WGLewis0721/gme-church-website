@@ -1,5 +1,25 @@
 # Greater Mt. Olive AME Zion Church Website
 
+## How To Use This Church Template
+
+This repository is a **zero-build, JSON-driven static church website template** that works directly on GitHub Pages — no Node.js, no React, no build step required.
+
+### Customize in 5 steps
+
+1. **Edit `/data/site.json`** — Update your church name, address, phone, email, service times, social media links, and YouTube channel ID. Every page pulls from this file automatically.
+
+2. **Edit `/data/sermons.json`** — Add or update sermon entries. Each entry needs an `id`, `title`, `date`, `speaker`, and `youtubeId` (the 11-character YouTube video ID). Thumbnails are auto-generated from the ID.
+
+3. **Edit `/data/gallery.json`** — Update photo URLs, alt text, and captions. Use Unsplash, your own hosted images, or any public image URL.
+
+4. **Replace images in `/assets/`** (optional) — If you host your own photos, add them to `/assets/` and reference them in `gallery.json`.
+
+5. **Push to GitHub** — Once GitHub Pages is configured (Settings → Pages → GitHub Actions), every push to `main` deploys automatically.
+
+> **No code changes are needed to customize the church name, service times, sermons, gallery, or social links.** Just edit the three JSON files and push.
+
+---
+
 🌐 **Live site:** https://wglewis0721.github.io/gme-church-website/
 
 Official website for Greater Mt. Olive AME Zion Church in Hayneville, AL — *Rooted in Faith. Growing in Grace. Serving in Love.*

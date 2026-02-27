@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give | Greater Mt. Olive AME Zion Church</title>
+  <meta name="description" content="Support the ministry of Greater Mt. Olive AME Zion Church. Give online, text to give, or mail your offering. Your generosity makes a difference.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Give | Greater Mt. Olive AME Zion Church">
+  <meta property="og:description" content="Support our mission through online giving, text to give, or by mail. Every gift spreads the love of Christ in our community.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1200&h=630&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5B2C83">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (rendered by app.js) -->
+  <div id="site-nav"></div>
+
+  <main id="main-content">
+
+    <!-- ── Hero (split layout) ────────────────────────────── -->
+    <section style="overflow:hidden;">
+      <div id="give-hero-grid" style="display:grid;grid-template-columns:1fr;">
+        <!-- Left: Text -->
+        <div style="background:var(--gradient-purple);padding:5rem 2rem;display:flex;align-items:center;">
+          <div style="max-width:28rem;margin:0 auto;">
+            <h1 style="color:var(--white);font-size:3.5rem;font-weight:900;margin-bottom:1rem;">Give</h1>
+            <p style="color:rgba(192,192,192,0.85);font-size:1rem;line-height:1.7;max-width:28rem;">
+              Your generous offerings, donations, and tithes support the mission and
+              ministry of <span data-site="churchName">Greater Mt. Olive AME Zion Church</span>.
+              Thank you for helping us spread the love of Christ in our community and beyond.
+            </p>
+          </div>
+        </div>
+        <!-- Right: Church photo (hidden on small screens) -->
+        <div style="position:relative;min-height:280px;overflow:hidden;display:none;" id="give-hero-img">
+          <img
+            src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&h=600&fit=crop"
+            alt="Church congregation worshipping"
+            style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+          <div style="position:absolute;inset:0;background:rgba(43,15,58,0.2);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Support Our Ministry Intro ───────────────────── -->
+    <section class="section-padding bg-white-section">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="section-header centered">
+            <span class="eyebrow">Your Gift Matters</span>
+            <h2>Support Our Ministry</h2>
+            <p class="subtitle">Every gift, no matter the size, makes a real impact in our church and community.</p>
+          </div>
+          <p style="color:var(--text-medium);line-height:1.7;font-size:1.0625rem;">
+            Your generous offerings, donations, and tithes support the mission and ministry
+            of Greater Mt. Olive AME Zion Church. Thank you for helping us spread the love
+            of Christ in our community and beyond.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Three Giving Method Cards ─────────────────────── -->
+    <section class="section-padding bg-soft">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Ways to Give</span>
+          <h2>Choose Your Giving Method</h2>
+        </div>
+        <div class="info-cards">
+          <!-- Give Online -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Give Online</h3>
+            <p>Give securely online anytime, anywhere. Quick, safe, and easy to set up recurring gifts to support the church consistently.</p>
+            <a href="https://example.com/give" data-site-href="givingLink" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Give Online Now
+            </a>
+          </div>
+          <!-- Text to Give -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3>Text to Give</h3>
+            <p>
+              Give instantly by text message. Text &ldquo;GIVE&rdquo; to
+              <strong data-site="textToGive">(334) 555-0200</strong>
+              and follow the simple steps to complete your gift from your phone.
+            </p>
+            <a href="sms:(334)555-0200" data-site-href="textToGive" class="btn-secondary">
+              Text to Give
+            </a>
+          </div>
+          <!-- By Mail -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3>By Mail</h3>
+            <p>
+              You may also mail your tithe or offering to our church office.
+              Make checks payable to &ldquo;<span data-site="churchName">Greater Mt. Olive AME Zion Church</span>.&rdquo;
+            </p>
+            <a href="#mailing-address" class="btn-secondary">View Mailing Address</a>
+          </div>
+        </div>
+
+        <!-- Mailing address -->
+        <div id="mailing-address" class="card mt-8 max-w-2xl mx-auto text-center" style="border-radius:1.25rem;padding:2rem;">
+          <h4 style="color:var(--deep-purple);font-size:1.125rem;margin-bottom:0.75rem;">Mailing Address</h4>
+          <p style="color:var(--text-medium);" data-site="churchName">Greater Mt. Olive AME Zion Church</p>
+          <p style="color:var(--text-medium);" data-site="mailAddress">P.O. Box 100, Hayneville, AL 36040</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why We Give ────────────────────────────────────── -->
+    <section class="section-padding bg-white-section">
+      <div class="container">
+        <div class="grid-2">
+          <!-- Left: Image -->
+          <div class="aspect-cover">
+            <img
+              src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?w=600&h=450&fit=crop"
+              alt="Church offering">
+          </div>
+          <!-- Right: Text -->
+          <div>
+            <div class="section-header">
+              <span class="eyebrow">The Heart of Giving</span>
+              <h2>Why We Give</h2>
+            </div>
+            <p style="color:var(--text-medium);line-height:1.7;margin-bottom:0.75rem;">
+              Giving is an act of worship and obedience, reflecting our gratitude for
+              God&rsquo;s blessings.
+            </p>
+            <p style="color:var(--text-medium);line-height:1.7;margin-bottom:1.5rem;">
+              Your support enables us to continue our programs, maintain our place of
+              worship, and reach out to those in need.
+            </p>
+            <blockquote>
+              <p>
+                &ldquo;Each of you should give what you have decided in your heart to give, not
+                reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
+              </p>
+              <footer>&mdash; 2 Corinthians 9:7</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Text-to-Give Banner ────────────────────────────── -->
+    <section class="bg-gold-tint" style="padding:2.5rem 0;">
+      <div class="container text-center">
+        <p class="eyebrow" style="margin-bottom:0.5rem;">Quick &amp; Easy</p>
+        <h3 style="color:var(--deep-purple);font-size:1.75rem;margin-bottom:0.75rem;">
+          Text to Give in Seconds
+        </h3>
+        <p style="color:var(--text-medium);margin-bottom:1.25rem;max-width:28rem;margin-left:auto;margin-right:auto;">
+          Text <strong style="color:var(--deep-purple);">&ldquo;GIVE&rdquo;</strong> to
+          <a href="sms:(334)555-0200" data-site-href="textToGive"
+             style="color:var(--purple);font-weight:700;text-decoration:underline;"
+             data-site="textToGive">(334) 555-0200</a>
+          and follow the prompts to complete your gift from your mobile phone.
+        </p>
+        <a href="sms:(334)555-0200?body=GIVE" data-site-href="textToGive"
+           style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--purple);color:var(--white);font-weight:700;padding:0.75rem 2rem;border-radius:0.5rem;transition:background 0.2s;"
+           onmouseover="this.style.background='var(--purple-light)'" onmouseout="this.style.background='var(--purple)'">
+          📱 Text <span data-site="textToGive">(334) 555-0200</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Final CTA ──────────────────────────────────────── -->
+    <section class="section-padding bg-white-section text-center">
+      <div class="container">
+        <h2 style="color:var(--deep-purple);font-size:2rem;margin-bottom:1rem;">Ready to Give?</h2>
+        <p style="color:var(--text-medium);font-size:1.125rem;margin-bottom:2rem;max-width:36rem;margin-left:auto;margin-right:auto;">
+          Thank you for your faithful and generous support of God&rsquo;s work through
+          <span data-site="churchName">Greater Mt. Olive AME Zion Church</span>.
+        </p>
+        <a href="https://example.com/give" data-site-href="givingLink" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Give Online Now
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (rendered by app.js) -->
+  <div id="site-footer"></div>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Show hero split image on md+ screens
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      var heroGrid = document.getElementById('give-hero-grid');
+      if (heroGrid) heroGrid.style.gridTemplateColumns = '1fr 1fr';
+      var heroImg = document.getElementById('give-hero-img');
+      if (heroImg) heroImg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
