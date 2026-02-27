@@ -5,7 +5,14 @@ import { galleryImages } from "@/data/gallery";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Greater Mt. Olive AME Zion Church",
+  title: "About Us",
+  description:
+    "Learn about the history, mission, leadership, and community of Greater Mt. Olive AME Zion Church in Hayneville, Alabama.",
+  openGraph: {
+    title: "About Us | Greater Mt. Olive AME Zion Church",
+    description:
+      "Learn about our history, mission, and the people who make Greater Mt. Olive a home for all who seek God.",
+  },
 };
 
 const leadership = [
@@ -193,6 +200,40 @@ export default function AboutPage() {
                 <p className="text-xs mt-1">{siteConfig.location.fullAddress}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ministries */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-main">
+          <SectionHeader
+            eyebrow="Get Involved"
+            title="Our Ministries"
+            subtitle="Discover where your gifts and passions can serve God and community."
+            centered
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {siteConfig.ministries.map((ministry) => (
+              <div
+                key={ministry.name}
+                className="bg-white border border-silver/40 rounded-xl p-6 card-shadow flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-full bg-purple-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-5 h-5 text-purple-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-purple-deep font-serif font-bold text-base mb-1">
+                    {ministry.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {ministry.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

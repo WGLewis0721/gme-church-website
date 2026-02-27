@@ -15,7 +15,7 @@ export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-purple-deep border-b border-purple-primary/30 shadow-lg">
+    <nav className="sticky top-0 z-50 bg-purple-deep border-b border-purple-primary/30 shadow-lg" aria-label="Site header">
       <div className="container-main">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Church Name */}
@@ -32,7 +32,7 @@ export default function NavBar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6" role="navigation" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -52,10 +52,11 @@ export default function NavBar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle navigation menu"
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileOpen ? (
@@ -69,7 +70,7 @@ export default function NavBar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="md:hidden border-t border-purple-primary/30 py-4 space-y-1">
+          <div id="mobile-menu" className="md:hidden border-t border-purple-primary/30 py-4 space-y-1" role="navigation" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

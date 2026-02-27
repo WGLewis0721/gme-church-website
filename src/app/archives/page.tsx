@@ -4,7 +4,14 @@ import { sermons } from "@/data/archives";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sermon Archives | Greater Mt. Olive AME Zion Church",
+  title: "Sermon Archives",
+  description:
+    "Browse our sermon library and watch messages from Greater Mt. Olive AME Zion Church. Be encouraged and transformed by the Word of God.",
+  openGraph: {
+    title: "Sermon Archives | Greater Mt. Olive AME Zion Church",
+    description:
+      "Browse our collection of sermons and messages. Watch, listen, and grow in your faith.",
+  },
 };
 
 export default function ArchivesPage() {
