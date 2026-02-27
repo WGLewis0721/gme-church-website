@@ -26,7 +26,7 @@
 
     <!-- ── Hero (split layout) ────────────────────────────── -->
     <section style="overflow:hidden;">
-      <div style="display:grid;grid-template-columns:1fr;">
+      <div id="give-hero-grid" style="display:grid;grid-template-columns:1fr;">
         <!-- Left: Text -->
         <div style="background:var(--gradient-purple);padding:5rem 2rem;display:flex;align-items:center;">
           <div style="max-width:28rem;margin:0 auto;">
@@ -212,7 +212,8 @@
   <script>
     // Show hero split image on md+ screens
     if (window.matchMedia('(min-width: 768px)').matches) {
-      document.querySelector('[style*="grid-template-columns:1fr"]').style.gridTemplateColumns = '1fr 1fr';
+      var heroGrid = document.getElementById('give-hero-grid');
+      if (heroGrid) heroGrid.style.gridTemplateColumns = '1fr 1fr';
       var heroImg = document.getElementById('give-hero-img');
       if (heroImg) heroImg.style.display = 'block';
     }

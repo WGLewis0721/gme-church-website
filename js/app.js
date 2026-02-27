@@ -206,7 +206,7 @@
     var containers = document.querySelectorAll(selector);
     if (!containers.length || !site.serviceTimes) return;
 
-    var gridClass = variant === "light" ? "service-times-grid" : "service-times-grid service-times-grid-light";
+    var gridClass = variant === "dark" ? "service-times-grid" : "service-times-grid service-times-grid-light";
     var html = "<div class=\"" + gridClass + "\">";
     site.serviceTimes.forEach(function (s) {
       html += `
@@ -272,17 +272,25 @@
 
   function renderMinistries(site, container) {
     if (!container || !site.ministries) return;
+    var isLight = container.dataset.variant === "light";
     var html = "";
 
     site.ministries.forEach(function (m) {
-      html += `
-        <div class="ministry-card">
-          <div class="ministry-icon">${ICONS.home}</div>
-          <div>
-            <h3>${esc(m.name)}</h3>
-            <p>${esc(m.description)}</p>
-          </div>
-        </div>`;
+      html += isLight
+        ? `<div class="ministry-card ministry-card--light">
+            <div class="ministry-icon ministry-icon--light">${ICONS.home}</div>
+            <div>
+              <h3 style="color:var(--deep-purple)">${esc(m.name)}</h3>
+              <p style="color:var(--text-medium)">${esc(m.description)}</p>
+            </div>
+          </div>`
+        : `<div class="ministry-card">
+            <div class="ministry-icon">${ICONS.home}</div>
+            <div>
+              <h3>${esc(m.name)}</h3>
+              <p>${esc(m.description)}</p>
+            </div>
+          </div>`;
     });
 
     container.innerHTML = html;

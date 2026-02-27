@@ -848,6 +848,12 @@ button:focus:not(:focus-visible) {
   gap: 1rem;
 }
 
+.ministry-card--light {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+}
+
 .ministry-icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -858,6 +864,11 @@ button:focus:not(:focus-visible) {
   justify-content: center;
   flex-shrink: 0;
   color: var(--gold);
+}
+
+.ministry-icon--light {
+  background: rgba(91, 44, 131, 0.1);
+  color: var(--purple);
 }
 
 .ministry-icon svg {
