@@ -18,6 +18,7 @@ src/
 │   └── page.tsx          # Home page (/)
 ├── components/           # Shared, reusable UI components (no business logic)
 │   ├── Button.tsx        # `<Button variant="primary|secondary|ghost">`
+│   ├── ChurchIcon.tsx    # Small circular church icon used in list items / cards
 │   ├── Footer.tsx        # Site-wide footer
 │   ├── GalleryGrid.tsx   # Responsive photo grid
 │   ├── InfoCard.tsx      # Stat/info card with icon, value, and label
@@ -53,7 +54,7 @@ src/
 ### Components
 - Keep components in `src/components/`. They should be presentational and receive all data via props.
 - Do not import from `src/data/` inside components — pass data as props from the page instead.
-- Use the existing `Button`, `SectionHeader`, `InfoCard`, `SermonCard`, and `VideoEmbed` components before creating new ones with similar functionality.
+- Use the existing `Button`, `ChurchIcon`, `SectionHeader`, `InfoCard`, `SermonCard`, and `VideoEmbed` components before creating new ones with similar functionality.
 
 ### Data & Configuration
 - **Church-wide settings** (name, address, service times, social links, giving info, live stream channel ID) live in `src/data/siteConfig.ts`. Import `siteConfig` wherever these values are needed.
