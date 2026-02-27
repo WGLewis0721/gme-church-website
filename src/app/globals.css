@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-primary: #5B2C83;
+  --color-purple-deep: #2B0F3A;
+  --color-purple-light: #7B3DB3;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B8960C;
+  --color-gold-light: #E8CC6A;
+  --color-silver: #C0C0C0;
+  --font-family-serif: Georgia, Cambria, "Times New Roman", serif;
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --max-width-container: 1200px;
+}
+
+:root {
+  --purple-primary: #5B2C83;
+  --purple-deep: #2B0F3A;
+  --gold: #D4AF37;
+  --silver: #C0C0C0;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a2e;
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-gold text-purple-deep font-semibold py-3 px-6 rounded-lg hover:bg-gold-dark transition-all duration-200 inline-block;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-purple-primary text-purple-primary font-semibold py-3 px-6 rounded-lg hover:bg-purple-primary hover:text-white transition-all duration-200 inline-block;
+  }
+
+  .btn-ghost {
+    @apply text-purple-primary font-semibold py-2 px-4 rounded-lg hover:bg-purple-primary/10 transition-all duration-200 inline-block;
+  }
+
+  .card-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
