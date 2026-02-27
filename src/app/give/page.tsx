@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import InfoCard from "@/components/InfoCard";
 import Button from "@/components/Button";
@@ -11,28 +12,33 @@ export const metadata: Metadata = {
 export default function GivePage() {
   return (
     <>
-      {/* Hero */}
-      <section
-        className="bg-purple-deep py-20 md:py-28 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #2B0F3A 0%, #5B2C83 100%)" }}
-      >
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full translate-x-1/2 -translate-y-1/2" />
-        </div>
-        <div className="container-main text-center relative z-10">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-            Make a Difference
-          </p>
-          <h1 className="text-white font-serif font-bold text-4xl md:text-5xl mb-4">
-            Give to God&apos;s Work
-          </h1>
-          <p className="text-silver/80 text-lg max-w-2xl mx-auto mb-8">
-            Your generous gifts support our ministry, community outreach, and the ongoing work
-            of God through Greater Mt. Olive AME Zion Church.
-          </p>
-          <Button href={siteConfig.giving.online} external variant="primary">
-            Give Online Now
-          </Button>
+      {/* Hero — split layout */}
+      <section className="relative overflow-hidden" style={{ minHeight: "340px" }}>
+        <div className="grid md:grid-cols-2" style={{ minHeight: "340px" }}>
+          {/* Left: Text */}
+          <div
+            className="flex flex-col justify-center px-8 py-20 md:py-28 relative z-10"
+            style={{ background: "var(--gradient-purple-deep)" }}
+          >
+            <h1 className="text-white font-serif font-bold text-5xl md:text-6xl mb-4">
+              Give
+            </h1>
+            <p className="text-silver/80 text-base max-w-sm leading-relaxed">
+              Your generous offerings, donations, and tithes support the mission and
+              ministry of Greater Mt. Olive AME Zion Church. Thank you for helping us
+              spread the love of Christ in our community and beyond.
+            </p>
+          </div>
+          {/* Right: Church photo */}
+          <div className="relative min-h-[260px]">
+            <Image
+              src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&h=600&fit=crop"
+              alt="Church congregation worshipping"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-purple-deep/20" />
+          </div>
         </div>
       </section>
 
@@ -47,10 +53,9 @@ export default function GivePage() {
               centered
             />
             <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-              When you give to Greater Mt. Olive AME Zion Church, you are investing in lives
-              being changed, families being strengthened, and our community being served. Your
-              faithfulness enables us to preach the Gospel, care for the needs of others, and
-              fulfill our God-given mission.
+              Your generous offerings, donations, and tithes support the mission and ministry
+              of Greater Mt. Olive AME Zion Church. Thank you for helping us spread the love
+              of Christ in our community and beyond.
             </p>
           </div>
         </div>
@@ -118,43 +123,39 @@ export default function GivePage() {
         </div>
       </section>
 
-      {/* Why We Give */}
-      <section
-        className="section-padding"
-        style={{ background: "linear-gradient(135deg, #2B0F3A 0%, #5B2C83 100%)" }}
-      >
+      {/* Why We Give — side-by-side layout */}
+      <section className="section-padding bg-white">
         <div className="container-main">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionHeader
-              eyebrow="The Heart of Giving"
-              title="Why We Give"
-              centered
-              light
-            />
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-8 md:p-12 mb-8">
-              <p className="text-gold font-serif text-2xl md:text-3xl font-bold italic mb-4">
-                &ldquo;Each of you should give what you have decided in your heart to give, not
-                reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
-              </p>
-              <p className="text-silver/70 text-base">— 2 Corinthians 9:7 (NIV)</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Image */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden card-shadow">
+              <Image
+                src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?w=600&h=450&fit=crop"
+                alt="Church offering plate with congregation"
+                fill
+                className="object-cover"
+              />
             </div>
-            <p className="text-silver/80 text-base leading-relaxed mb-6">
-              Giving is an act of worship and an expression of trust in God&apos;s provision.
-              As we give generously and cheerfully, we participate in the work of His Kingdom —
-              impacting lives, funding ministries, and advancing the Gospel in our community
-              and beyond.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-              {[
-                { title: "Fund Ministry", desc: "Your gifts power worship services, outreach, and discipleship programs." },
-                { title: "Serve Community", desc: "We provide food, resources, and support to families in need." },
-                { title: "Grow Together", desc: "Your generosity enables us to grow our facilities and programming." },
-              ].map((item) => (
-                <div key={item.title} className="bg-white/10 border border-white/20 rounded-xl p-5">
-                  <h4 className="text-gold font-semibold text-sm uppercase tracking-wide mb-2">{item.title}</h4>
-                  <p className="text-silver/70 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+            {/* Right: Text */}
+            <div>
+              <SectionHeader eyebrow="The Heart of Giving" title="Why We Give" />
+              <p className="text-gray-600 leading-relaxed mb-3">
+                Giving is an act of worship and obedience, reflecting our gratitude for
+                God&apos;s blessings.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Your support enables us to continue our programs, maintain our place of
+                worship, and reach out to those in need.
+              </p>
+              <blockquote className="border-l-4 border-gold pl-5">
+                <p className="text-purple-deep font-serif italic text-base leading-relaxed mb-2">
+                  &ldquo;Each of you should give what you have decided in your heart to give, not
+                  reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
+                </p>
+                <footer className="text-gray-500 text-sm not-italic">
+                  — 2 Corinthians 9:7
+                </footer>
+              </blockquote>
             </div>
           </div>
         </div>
