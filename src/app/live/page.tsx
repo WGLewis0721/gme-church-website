@@ -81,8 +81,8 @@ export default function LivePage() {
             <Button href={siteConfig.giving.online} external variant="primary">
               Give Online Now
             </Button>
-            <Button href="/give" variant="ghost">
-              <span className="text-silver/80">Learn About Giving</span>
+            <Button href="/give" variant="lightGhost">
+              Learn About Giving
             </Button>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function HomePage() {
                 Watch Live
               </Button>
               <Button href={siteConfig.giving.online} external variant="secondary">
-                <span className="text-silver">Give Online</span>
+                Give Online
               </Button>
             </div>
           </div>

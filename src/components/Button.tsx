@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "lightGhost";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-gold text-purple-deep font-semibold py-3 px-6 rounded-lg hover:bg-gold-dark transition-all duration-200",
   secondary: "border-2 border-purple-primary text-purple-primary font-semibold py-3 px-6 rounded-lg hover:bg-purple-primary hover:text-white transition-all duration-200",
   ghost: "text-purple-primary font-semibold py-2 px-4 rounded-lg hover:bg-purple-primary/10 transition-all duration-200",
+  lightGhost: "text-silver font-semibold py-2 px-4 rounded-lg hover:bg-white/10 transition-all duration-200",
 };
 
 export default function Button({
