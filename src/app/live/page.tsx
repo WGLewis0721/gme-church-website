@@ -5,7 +5,14 @@ import { siteConfig } from "@/data/siteConfig";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Live Service | Greater Mt. Olive AME Zion Church",
+  title: "Live Service",
+  description:
+    "Watch Greater Mt. Olive AME Zion Church live every Sunday at 10:30 AM CT. Stream our worship service or catch the latest recording on YouTube.",
+  openGraph: {
+    title: "Live Service | Greater Mt. Olive AME Zion Church",
+    description:
+      "Watch our Sunday morning worship service live every Sunday at 10:30 AM CT. Join us from anywhere in the world.",
+  },
 };
 
 export default function LivePage() {
@@ -35,7 +42,7 @@ export default function LivePage() {
         <div className="container-main">
           <div className="max-w-4xl mx-auto">
             <VideoEmbed
-              src="https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxx&autoplay=0"
+              src={`https://www.youtube.com/embed/live_stream?channel=${siteConfig.liveStream.youtubeChannelId}&autoplay=0`}
               title="Greater Mt. Olive Live Service"
             />
             <div className="mt-6 bg-purple-deep/5 border border-silver/40 rounded-xl p-6">

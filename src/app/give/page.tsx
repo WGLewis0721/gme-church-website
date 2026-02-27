@@ -6,7 +6,14 @@ import { siteConfig } from "@/data/siteConfig";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Give | Greater Mt. Olive AME Zion Church",
+  title: "Give",
+  description:
+    "Support the ministry of Greater Mt. Olive AME Zion Church. Give online, text to give, or mail your offering. Your generosity makes a difference.",
+  openGraph: {
+    title: "Give | Greater Mt. Olive AME Zion Church",
+    description:
+      "Support our mission through online giving, text to give, or by mail. Every gift spreads the love of Christ in our community.",
+  },
 };
 
 export default function GivePage() {
@@ -32,7 +39,7 @@ export default function GivePage() {
           {/* Right: Church photo */}
           <div className="relative min-h-[260px]">
             <Image
-              src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&h=600&fit=crop&fm=webp"
               alt="Church congregation worshipping"
               fill
               className="object-cover"
@@ -130,7 +137,7 @@ export default function GivePage() {
             {/* Left: Image */}
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden card-shadow">
               <Image
-                src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?w=600&h=450&fit=crop"
+                src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?w=600&h=450&fit=crop&fm=webp"
                 alt="Church offering plate with congregation"
                 fill
                 className="object-cover"
@@ -158,6 +165,39 @@ export default function GivePage() {
               </blockquote>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Text-to-Give Highlight Banner */}
+      <section className="py-10 bg-gold/10 border-y border-gold/30">
+        <div className="container-main text-center">
+          <p className="text-purple-deep font-semibold text-sm uppercase tracking-widest mb-2">
+            Quick & Easy
+          </p>
+          <h3 className="text-purple-deep font-serif font-bold text-2xl md:text-3xl mb-3">
+            Text to Give in Seconds
+          </h3>
+          <p className="text-gray-600 mb-5 max-w-md mx-auto">
+            Text <strong className="text-purple-deep">&ldquo;GIVE&rdquo;</strong> to{" "}
+            <a
+              href={`sms:${siteConfig.giving.textToGive}`}
+              className="text-purple-primary font-bold underline hover:text-purple-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary focus-visible:ring-offset-2 rounded"
+              aria-label={`Text GIVE to ${siteConfig.giving.textToGive} to donate`}
+            >
+              {siteConfig.giving.textToGive}
+            </a>{" "}
+            and follow the prompts to complete your gift from your mobile phone.
+          </p>
+          <a
+            href={`sms:${siteConfig.giving.textToGive}?body=GIVE`}
+            className="inline-flex items-center gap-2 bg-purple-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-purple-light transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary focus-visible:ring-offset-2"
+            aria-label={`Open text message to ${siteConfig.giving.textToGive}`}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            Text {siteConfig.giving.textToGive}
+          </a>
         </div>
       </section>
 

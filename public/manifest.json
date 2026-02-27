@@ -1,0 +1,29 @@
+{
+  "name": "Greater Mt. Olive AME Zion Church",
+  "short_name": "Greater Mt. Olive",
+  "description": "Rooted in Faith. Growing in Grace. Serving in Love.",
+  "start_url": "/gme-church-website/",
+  "display": "standalone",
+  "background_color": "#2B0F3A",
+  "theme_color": "#5B2C83",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/gme-church-website/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/gme-church-website/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/gme-church-website/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
